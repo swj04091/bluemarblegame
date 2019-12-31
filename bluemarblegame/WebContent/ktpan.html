@@ -29,67 +29,69 @@ table {
 	<div class="board">
 		<table border='1'>
 			<tr>
-				<td id='p11'>11</td>
-				<td id='p12'>12</td>
-				<td id='p13'>13</td>
-				<td id='p14'>14</td>
-				<td id='p15'>15</td>
-				<td id='p16'>16</td>
-				<td id='p17'>17</td>
-				<td id='p18'>18</td>
-				<td id='p19'>19</td>
-				<td id='p20'>20</td>
-				<td id='p21'>21</td>
+				<td id='p11'>무인도</td>
+				<td id='p12'>아테네</td>
+				<td id='p13'>황금열쇠</td>
+				<td id='p14'>코펜하겐</td>
+				<td id='p15'>스톡홀름</td>
+				<td id='p16'>콩코드여객기</td>
+				<td id='p17'>베른</td>
+				<td id='p18'>황금열쇠</td>
+				<td id='p19'>베를린</td>
+				<td id='p20'>오타와</td>
+				<td id='p21'>사회복지기금</td>
 			</tr>
 			<tr>
-				<td id='p10'>10</td>
-				<td colspan='9' rowspan='9'></td>
-				<td id='p22'>22</td>
+				<td id='p10'>이스탄불</td>
+				<td colspan='9' rowspan='9'>
+				<button type="button" id="dice">버튼</button>
+				</td>
+				<td id='p22'>부에노스아이레스</td>
 			</tr>
 			<tr>
-				<td id='p9'>9</td>
-				<td id='p23'>23</td>
+				<td id='p9'>카이로</td>
+				<td id='p23'>황금열쇠</td>
 			</tr>
 			<tr>
-				<td id='p8'>8</td>
-				<td id='p24'>24</td>
+				<td id='p8'>황금열쇠</td>
+				<td id='p24'>시드니</td>
 			</tr>
 			<tr>
-				<td id='p7'>7</td>
-				<td id='p25'>25</td>
+				<td id='p7'>싱가포르</td>
+				<td id='p25'>상파울로</td>
 			</tr>
 			<tr>
-				<td id='p6'>6</td>
-				<td id='p26'>26</td>
+				<td id='p6'>제주도</td>
+				<td id='p26'>부산</td>
 			</tr>
 			<tr>
-				<td id='p5'>5</td>
-				<td id='p27'>27</td>
+				<td id='p5'>마닐라</td>
+				<td id='p27'>리스본</td>
 			</tr>
 			<tr>
-				<td id='p4'>4</td>
-				<td id='p28'>28</td>
+				<td id='p4'>베이징</td>
+				<td id='p28'>하와이</td>
 			</tr>
 			<tr>
-				<td id='p3'>3</td>
-				<td id='p29'>29</td>
+				<td id='p3'>황금열쇠</td>
+				<td id='p29'>퀸엘리자베스호</td>
 			</tr>
 			<tr>
-				<td id='p2'>2</td>
-				<td id='p30'>30</td>
+				<td id='p2'>타이베이</td>
+				<td id='p30'>마드리드</td>
 			</tr>
 			<tr>
-				<td id='p1'>1</td>
-				<td id='p40'>40</td>
-				<td id='p39'>39</td>
-				<td id='p38'>38</td>
-				<td id='p37'>37</td>
-				<td id='p36'>36</td>
-				<td id='p35'>35</td>
-				<td id='p34'>34</td>
-				<td id='p33'>33</td>
-				<td id='p32'>32</td>
-				<td id='p31'>31</td>
+				<td id='p1'>출발</td>
+				<td id='p40'>서울</td>
+				<td id='p39'>사회복지기금</td>
+				<td id='p38'>뉴욕</td>
+				<td id='p37'>런던</td>
+				<td id='p36'>황금열쇠</td>
+				<td id='p35'>로마</td>
+				<td id='p34'>파리</td>
+				<td id='p33'>콜럼비아호</td>
+				<td id='p32'>도쿄</td>
+				<td id='p31'>우주여행</td>
 			</tr>
 		</table>
 	</div>
@@ -100,12 +102,13 @@ table {
 	
 </body>
 <script>
+	let player = [];
 	$(document).ready(function(){
 		$(".board").hide();
 		$("#playerBoard").hide();
 		
 		let player_number = 0;
-		let player = [];
+		
 		let beforePoint = 1;
 		let afterPoint = 1;
 		
@@ -132,6 +135,7 @@ table {
 				}
 				console.log(player);
 			}else{
+				
 				alert("인원수를 체크를 해주세요.");
 			}
 			
@@ -139,4 +143,6 @@ table {
 		
 	});
 </script>
+<script src="/bluemarblegame/scripts/play.js"></script>
+<script src="/bluemarblegame/scripts/goldenKey.js"></script>
 </html>

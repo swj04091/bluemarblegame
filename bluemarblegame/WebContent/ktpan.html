@@ -1,139 +1,142 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta charset="UTF-8">
-        <title>Blue Marble</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- jQuery library -->
-        <style>
-            .gameborder {
-                border : 1px solid #000000;
-                height: 50px
-            }
-        </style>
-        <script src="/bluemarblegame/scripts/jquery-3.4.1.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script>
- 
-            window.addEventListener("load", function(){
-                let beforePoint = 1;
-                let afterPoint = 1;
-                let play = document.querySelector("#play");
-                play.addEventListener("click", function(){
-                    let ran = Math.floor((Math.random()*6)+1);
-                    document.querySelector("#dice").value = ran;
-                    if(beforePoint+ran < 45) {
-                        afterPoint = beforePoint + ran;
-                    } else {
-                        afterPoint = beforePoint+ran-44;
-                    }
-                    document.querySelector("#point").value = afterPoint;
-                    // 말을 이동시킵니다.
-                    let afterId = "#p"+afterPoint;
-                    document.querySelector(afterId).innerHTML
-                        = '<button class="btn-danger">♠</button>';
- 
-                    let beforeId = "#p"+beforePoint;
-                    document.querySelector(beforeId).innerHTML = "";
- 
-                    beforePoint = afterPoint;
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <div class="container">
-            <h5>
-                Blue Marble
-                <input id="play" type="button" value="주사위 play"/>
-                주사위 값 : <input id="dice" type="text"/>
-                이동 지점 : <input id="point" type="text"/>
-            </h5>
-            <div class="row">
-                <div class="col-sm-1 gameborder">
-                        1
-                        <span id="p1">
-                            <button class="btn-danger">♠</button>
-                        </span>
-                </div>
-                <div class="col-sm-1 gameborder">2<span id="p2"></span></div>
-                <div class="col-sm-1 gameborder">3<span id="p3"></span></div>
-                <div class="col-sm-1 gameborder">4<span id="p4"></span></div>
-                <div class="col-sm-1 gameborder">5<span id="p5"></span></div>
-                <div class="col-sm-1 gameborder">6<span id="p6"></span></div>
-                <div class="col-sm-1 gameborder">7<span id="p7"></span></div>
-                <div class="col-sm-1 gameborder">8<span id="p8"></span></div>
-                <div class="col-sm-1 gameborder">9<span id="p9"></span></div>
-                <div class="col-sm-1 gameborder">10<span id="p10"></span></div>
-                <div class="col-sm-1 gameborder">11<span id="p11"></span></div>
-                <div class="col-sm-1 gameborder">12<span id="p12"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">44<span id="p44"></span></div>
-                <div class="col-sm-10"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;</div>
-                <div class="col-sm-1 gameborder">13<span id="p13"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">43<span id="p43"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">14<span id="p14"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">42<span id="p42"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">15<span id="p15"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">41<span id="p41"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">16<span id="p16"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">40<span id="p40"></span></div>
-                <div class="col-sm-10"><span class="bg-primary">Blue Marble / Copyright @JJDEV</span></div>
-                <div class="col-sm-1 gameborder">17<span id="p17"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">39<span id="p39"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">18<span id="p18"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">38<span id="p38"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">19<span id="p19"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">37<span id="p37"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">20<span id="p20"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">36<span id="p36"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">21<span id="p21"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">35<span id="p35"></span></div>
-                <div class="col-sm-10">&nbsp;</div>
-                <div class="col-sm-1 gameborder">22<span id="p22"></span></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1 gameborder">34<span id="p34"></span></div>
-                <div class="col-sm-1 gameborder">33<span id="p33"></span></div>
-                <div class="col-sm-1 gameborder">32<span id="p32"></span></div>
-                <div class="col-sm-1 gameborder">31<span id="p31"></span></div>
-                <div class="col-sm-1 gameborder">30<span id="p30"></span></div>
-                <div class="col-sm-1 gameborder">29<span id="p29"></span></div>
-                <div class="col-sm-1 gameborder">28<span id="p28"></span></div>
-                <div class="col-sm-1 gameborder">27<span id="p27"></span></div>
-                <div class="col-sm-1 gameborder">26<span id="p26"></span></div>
-                <div class="col-sm-1 gameborder">25<span id="p25"></span></div>
-                <div class="col-sm-1 gameborder">24<span id="p24"></span></div>
-                <div class="col-sm-1 gameborder">23<span id="p23"></span></div>
-            </div>
-        </div>
-    </body>
+<meta charset="UTF-8">
+<head>
+<title>Blue Marble</title>
+</head>
+<style>
+.board {
+	height: 50%;
+	width: 50%;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+</style>
+<script src="/bluemarblegame/scripts/jquery-3.4.1.min.js"></script>
+<body>
+	<div id="selectPlayer">
+		<h1>플레이어 선택</h1>
+		<div><input type="radio" value="2" name="playerNum">2인</div>
+		<div><input type="radio" value="3" name="playerNum">3인</div>
+		<div><input type="radio" value="4" name="playerNum">4인</div>
+		<div><button type="button" id="playerNumBtn" >게임시작</button></div>
+	</div>
+
+	<div class="board">
+		<table border='1'>
+			<tr>
+				<td id='p11'>11</td>
+				<td id='p12'>12</td>
+				<td id='p13'>13</td>
+				<td id='p14'>14</td>
+				<td id='p15'>15</td>
+				<td id='p16'>16</td>
+				<td id='p17'>17</td>
+				<td id='p18'>18</td>
+				<td id='p19'>19</td>
+				<td id='p20'>20</td>
+				<td id='p21'>21</td>
+			</tr>
+			<tr>
+				<td id='p10'>10</td>
+				<td colspan='9' rowspan='9'></td>
+				<td id='p22'>22</td>
+			</tr>
+			<tr>
+				<td id='p9'>9</td>
+				<td id='p23'>23</td>
+			</tr>
+			<tr>
+				<td id='p8'>8</td>
+				<td id='p24'>24</td>
+			</tr>
+			<tr>
+				<td id='p7'>7</td>
+				<td id='p25'>25</td>
+			</tr>
+			<tr>
+				<td id='p6'>6</td>
+				<td id='p26'>26</td>
+			</tr>
+			<tr>
+				<td id='p5'>5</td>
+				<td id='p27'>27</td>
+			</tr>
+			<tr>
+				<td id='p4'>4</td>
+				<td id='p28'>28</td>
+			</tr>
+			<tr>
+				<td id='p3'>3</td>
+				<td id='p29'>29</td>
+			</tr>
+			<tr>
+				<td id='p2'>2</td>
+				<td id='p30'>30</td>
+			</tr>
+			<tr>
+				<td id='p1'>1</td>
+				<td id='p40'>40</td>
+				<td id='p39'>39</td>
+				<td id='p38'>38</td>
+				<td id='p37'>37</td>
+				<td id='p36'>36</td>
+				<td id='p35'>35</td>
+				<td id='p34'>34</td>
+				<td id='p33'>33</td>
+				<td id='p32'>32</td>
+				<td id='p31'>31</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="playerBoard">
+		<h2>Board</h2>
+	</div>
+	
+</body>
+<script>
+	$(document).ready(function(){
+		$(".board").hide();
+		$("#playerBoard").hide();
+		
+		let player_number = 0;
+		let player = [];
+		let beforePoint = 1;
+		let afterPoint = 1;
+		
+		$("#playerNumBtn").click(function(){
+			// 인원수를 체크를 한 뒤 버튼을 눌렀을 경우
+			console.log("게임시작 버튼 클릭");
+			if(player_number = $('input:radio[name="playerNum"]:checked').val()){
+				console.log(player_number);
+				$("#selectPlayer").hide();
+				$(".board").show();
+				$("#playerBoard").show();
+				
+				//플레이어 추가
+				for(i=1; i<=$('input:radio[name="playerNum"]:checked').val(); i++){
+					player.push({
+						player : i,
+						beforePoint : 1,
+						afterPoint : 1,
+						beforeId : "#p" + beforePoint,
+						afterId : "#p" + afterPoint,
+						round : 0,
+						money : 3000000
+					})
+				}
+				console.log(player);
+			}else{
+				alert("인원수를 체크를 해주세요.");
+			}
+			
+		});
+		
+	});
+</script>
 </html>

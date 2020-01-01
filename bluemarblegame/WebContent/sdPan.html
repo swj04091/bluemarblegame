@@ -15,6 +15,10 @@ table {
 	height: 100%;
 	text-align: center;
 }
+input{
+	width:10px;
+	height:10px;
+}
 </style>
 <script src="/bluemarblegame/scripts/jquery-3.4.1.min.js"></script>
 <body>
@@ -132,6 +136,7 @@ table {
 						round : 0,
 						money : 3000000
 					})
+					$("#p1").append("<input type='image' class='player"+i+"' src='/bluemarblegame/img/pin"+i+".png'>");
 				}
 				console.log(player);
 			}else{
@@ -141,6 +146,7 @@ table {
 		});
 		
 	});
+	console.log(player);
 </script>
 <script src="/bluemarblegame/scripts/play.js"></script>
 </html>

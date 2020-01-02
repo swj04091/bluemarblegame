@@ -15,8 +15,8 @@ $(document).ready(function(){
 	let gamer;
 	
 	function movedice(){
-		console.log(turn);
-		gamer=player[turn];
+			gamer=player[turn];	console.log(turn);
+
 		console.log(gamer);
 		firstDice = Math.floor(Math.random()*6+1);//랜덤 출력 1~6
 		secondDice = Math.floor(Math.random()*6+1);//랜덤 출력 1~6

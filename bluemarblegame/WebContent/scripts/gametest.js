@@ -75,9 +75,13 @@
 				if(turn>=player.length){//플레이어 4명 기준 4명이 다 한번씩 했을 경우 첫번째 플레이어로 돌린다
 					turn=0;
 				}
-/*				switch(gamer.afterPoint){
+				switch(gamer.afterPoint){
 				
-				case 39:  //사회 복지 기금 15만원 지출 
+				case 3,8,13,18,23,36:
+						alert("gold card");
+						goldenKey(gamer);
+						
+				/*case 39:  //사회 복지 기금 15만원 지출 
 						gamer.money -= 150000;
 						console.log(gamer.money);
 						$(person).empty();
@@ -184,7 +188,7 @@
 							}
 						console.log("else after",gamer);
 							break;
-								
+								*/
 					default:	
 										
 						//현재 위치를 주사위 돌리기 전으로 초기화해준다
@@ -199,7 +203,7 @@
 						 }
 						break;
 				}//----------switch End
-*/				
+				
 			}
 
 	let space = function(){//--------------------select 클릭

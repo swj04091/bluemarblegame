@@ -97,7 +97,7 @@ table {
 	</div>
 	
 	<div id="playerBoard">
-		<h2>Board</h2>
+		
 	</div>
 	
 </body>
@@ -131,7 +131,13 @@ table {
 						afterId : "#p" + afterPoint,
 						round : 0,
 						money : 3000000
-					})
+					});
+					
+					let playerTable = "<table boader='1'>";
+						playerTable += "<tr><td>플레이어 번호: <input type='text' value=''></td><td>플레이어잔액</td></tr>";
+						playerTable += 
+					$("#playerBoard").append();
+					
 				}
 				console.log(player);
 			}else{

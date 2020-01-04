@@ -23,7 +23,7 @@ input{
 <script src="/bluemarblegame/scripts/jquery-3.4.1.min.js"></script>
 <body>
 	<div id="selectPlayer">
-		<h1>플레이어 선택12</h1>
+		<h1>플레이어 선택2121212</h1>
 		<div><input type="radio" value="2" name="playerNum">2인</div>
 		<div><input type="radio" value="3" name="playerNum">3인</div>
 		<div><input type="radio" value="4" name="playerNum">4인</div>
@@ -49,6 +49,50 @@ input{
 				<td id='p10'>10</td>
 				<td colspan='9' rowspan='9'>
 					<button type="button" id="dice">버튼</button>
+					<div id="spaceTrip">
+						<select id="trip"><!-- 우주여행 칸은 31 -->
+									<option value=1>출발</option>
+									<option value=2>타이베이</option>
+									<option value=3>황금열쇠</option>
+									<option value=4>베이징</option>
+									<option value=5>마닐라</option>
+									<option value=6>제주</option>
+									<option value=7>싱가포르</option>
+									<option value=8>황금열쇠</option>
+									<option value=9>카이로</option>
+									<option value=10>이스탄불</option>
+									<option value=11>무인도</option>
+									<option value=12>아테네</option>
+									<option value=13>황금 열쇠</option>
+									<option value=14>코펜하겐</option>
+									<option value=15>스톡홀름</option>
+									<option value=16>콩코드 여객기</option>
+									<option value=17>베른</option>
+									<option value=18>황금 열쇠</option>
+									<option value=19>베를린</option>
+									<option value=20>오타와</option>
+									<option value=21>사회복지 기금 접수처</option>
+									<option value=22>부에노스아이레스</option>
+									<option value=23>황금열쇠</option>
+									<option value=24>상파울루</option>
+									<option value=25>시드니</option>
+									<option value=26>부산</option>
+									<option value=27>하와이</option>
+									<option value=28>리스본</option>
+									<option value=29>퀸 엘리자베스호</option>
+									<option value=30>마드리드</option>
+									<option value=32>도쿄</option>
+									<option value=33>컬럼비아호</option>
+									<option value=34>파리</option>
+									<option value=35>로마</option>
+									<option value=36>황금 열쇠</option>
+									<option value=37>런던</option>
+									<option value=38>뉴욕</option>
+									<option value=39>사회복지 기금</option>
+									<option value=40>서울</option>
+								</select>
+							<button id="gogo">GoGo</button>
+					</div>
 				</td>
 				<td id='p22'>22</td>
 			</tr>
@@ -101,7 +145,13 @@ input{
 	</div>
 	
 	<div id="playerBoard">
-		<h2>Board</h2>
+		<table>
+			<thead id="playerName">
+				
+			</thead>
+			<tbody id="playerImg">
+			</tbody>
+		</table>
 	</div>
 	
 </body>
@@ -110,7 +160,7 @@ input{
 	$(document).ready(function(){
 		$(".board").hide();
 		$("#playerBoard").hide();
-		
+		$("#spaceTrip").hide();
 		let player_number = 0;
 		
 		let beforePoint = 1;
@@ -137,6 +187,8 @@ input{
 						money : 3000000
 					})
 					$("#p1").append("<input type='image' class='player"+i+"' src='/bluemarblegame/img/pin"+i+".png'>");
+					$("#playerName").append("<td>player"+i+"</td>");
+					$("#playerImg").append("<td><img src='/bluemarblegame/img/pin"+i+".png'></td>");
 				}
 				console.log(player);
 			}else{
@@ -148,6 +200,6 @@ input{
 	});
 </script>
 <!-- <script src="/bluemarblegame/scripts/play.js"></script> -->
-<script src="/bluemarblegame/scripts/goldenKey.js"></script>
+<!-- <script src="/bluemarblegame/scripts/goldenKey.js"></script> -->
 <script src="/bluemarblegame/scripts/gametest.js"></script>
 </html>
